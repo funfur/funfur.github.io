@@ -13,7 +13,16 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import {globalVar} from '@/globalVar'
+import * as VueGoogleMaps from 'vue2-google-maps'
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: process.env.GOOGLE_API, // -> .env
+    libraries: 'places',
+  },
+})
 
 export default {
   name: "GoogleMap",

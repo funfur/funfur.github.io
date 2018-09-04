@@ -57,7 +57,7 @@ export default {
   methods: {
     plusFriendChat() {
       Kakao.PlusFriend.chat({
-        plusFriendId: process.env.KAKAO_URL
+        plusFriendId: process.env.KAKAO_URL // -> .env
       })
     }
   },

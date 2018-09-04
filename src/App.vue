@@ -5,6 +5,14 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import VueProgressBar from 'vue-progressbar'
+
+Vue.use(VueProgressBar, {
+  color: '#ffbe19',
+  height: '2px'
+})
+
 export default {
   name: 'app',
 
@@ -12,6 +20,7 @@ export default {
     this.$Progress.finish()
   },
 
+  // load progressbar
   created () {
     this.$Progress.start()
     this.$router.beforeEach((to, from, next) => {

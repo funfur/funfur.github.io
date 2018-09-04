@@ -5,37 +5,21 @@ import store from '@/store'
 import router from '@/router'
 import VueI18n from 'vue-i18n'
 import VTooltip from 'v-tooltip'
-import Toasted from 'vue-toasted'
 import VueScrollTo from 'vue-scrollto'
-import VueClipboard from 'vue-clipboard2'
-import VueProgressBar from 'vue-progressbar'
 import VueScrollReveal from 'vue-scroll-reveal'
-import * as VueGoogleMaps from 'vue2-google-maps'
 import {globalVar} from '@/globalVar'
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
 
-Vue.use(VueI18n)
-Vue.use(Toasted)
+Vue.use(VueI18n) // locale
 Vue.use(VTooltip)
 Vue.use(VueScrollTo)
-Vue.use(VueClipboard)
 Vue.use(VueScrollReveal)
-Vue.use(VueProgressBar, {
-  color: '#ffbe19',
-  height: '2px'
-})
 
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: process.env.GOOGLE_API,
-    libraries: 'places',
-  },
-})
+Kakao.init(process.env.KAKAO_KEY) // -> .env
 
-Kakao.init(process.env.KAKAO_KEY)
-
+// set locale
 import {messages} from './added'
 window.i18n = new VueI18n({
   locale: 'ko',

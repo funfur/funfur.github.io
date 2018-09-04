@@ -10,7 +10,10 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# image compresser
+gulp watch
+
+# serve with hot reload at localhost:5000
 npm run dev
 
 # build for production with minification
