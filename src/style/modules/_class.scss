@@ -20,6 +20,16 @@
 
 
 /* ==============================
+  transform
+============================== */
+@mixin transform    ($val){
+  -webkit-transform: $val;
+          transform: $val
+}
+
+
+
+/* ==============================
   css grid layout
 ============================== */
 @mixin grid-layout($col:3, $row:$grid12x, $gap:$grid24x){

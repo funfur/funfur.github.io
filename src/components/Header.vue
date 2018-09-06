@@ -80,14 +80,14 @@ export default {
 
       .header__logo {
         width: $grid10x;
-        transform: translate(0, 20%);
+        @include transform(translate(0, 20%));
       }
 
       .header__text {
         color: #fff;
         margin-left: $grid3x;
         display: inline-block;
-        transform: translate(0, -20%);
+        @include transform(translate(0, -20%));
       }
     }
 
@@ -111,7 +111,7 @@ export default {
 
   .header__right {
     float: right;
-    transform: translate(0, 25%);
+    @include transform(translate(0, 25%));
 
     .header__right--link {
       font-weight: 900;
@@ -125,7 +125,7 @@ export default {
       color: $textccc;
       margin-left: $grid8x;
       vertical-align: middle;
-      transition: color .25s ease;
+      transition: all .25s ease;
       @include font-size($grid6x);
 
       @media #{$pablet} {
@@ -136,6 +136,7 @@ export default {
 
         &:hover {
           color: $color-ig;
+          @include transform(scale(1.1));
         }
       }
 
@@ -143,6 +144,7 @@ export default {
 
         &:hover {
           color: $color-fb;
+          @include transform(scale(1.1));
         }
       }
     }

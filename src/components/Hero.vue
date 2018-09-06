@@ -72,7 +72,7 @@ $baseURI: '/src/assets/dist/hero.jpg';
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%);
+    @include transform(translate(-50%, -50%));
 
     .hero__subtitle {
       margin-bottom: -#{$grid2x};
